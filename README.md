@@ -7,7 +7,7 @@ This is a **listbox widget** for customtkinter, works just like the tkinter list
 
 > NOTE: This is a fork of the original CTkListbox library by Akascape, which fixes some bugs (that would otherwise cause the widget to be hardly usable), adds typing and a few other features.
 ```
-pip install ctk_listbox
+pip install ctk_listbox_typed
 ```
 ### [<img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/Akascape/CTkListbox?&color=white&label=Download%20Source%20Code&logo=Python&logoColor=yellow&style=for-the-badge"  width="400">](https://github.com/Akascape/CTkListbox/archive/refs/heads/main.zip)
 
