@@ -175,7 +175,7 @@ class CTkListbox(customtkinter.CTkScrollableFrame):
                 self.selected.configure(fg_color=self.button_fg_color)
                 self.selected = None
                 return
-        if self.buttons[index] in self.selections:
+        if index in self.buttons and self.buttons[index] in self.selections:
             self.selections.remove(self.buttons[index])
             self.buttons[index].configure(fg_color=self.button_fg_color)
 
