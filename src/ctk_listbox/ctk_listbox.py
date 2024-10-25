@@ -3,6 +3,7 @@ Custom ListBox for customtkinter
 Author: Akash Bora
 """
 
+import sys
 import customtkinter
 
 class CTkListbox(customtkinter.CTkScrollableFrame):
@@ -34,6 +35,11 @@ class CTkListbox(customtkinter.CTkScrollableFrame):
             border_width=border_width,
             **kwargs,
         )
+        # fix mouse wheel on Linux (wild botch) 
+        # https://github.com/TomSchimansky/CustomTkinter/issues/1356#issuecomment-1474104298
+        if sys.platform.startswith("linux"):
+            self.bind_all("<Button-4>", lambda e: self._parent_canvas.yview("scroll", -1, "units"))
+            self.bind_all("<Button-5>", lambda e: self._parent_canvas.yview("scroll", 1, "units"))
         self._scrollbar.grid_configure(padx=(0, border_width + 4))
         self._scrollbar.configure(width=12)
 

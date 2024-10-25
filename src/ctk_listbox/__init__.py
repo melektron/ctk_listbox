@@ -6,6 +6,6 @@ License: MIT
 Homepage: https://github.com/melektron/ctk_listbox
 """
 
-__version__ = '1.5.0'
+__version__ = '1.5.1'
 
 from .ctk_listbox import CTkListbox
